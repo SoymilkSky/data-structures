@@ -7,17 +7,22 @@ var Stack = function() {
   // Implement the methods below
   someInstance.push = function(value) {
     // if the storage is empty, add new value to storage at key 0;
-    if (Object.keys(storage).length === 0) {
+    let keys = Object.keys(storage);
+    if (keys.length === 0) {
       storage['0'] = value;
     } else {
       // else, find the last key in the storage object, add 1 to it, assign old value to new key
       // assign new value to old key;
-      let keys = Object.keys(storage);
-      let i = keys[keys.length - 1];
-      let temp = storage[i];
-      let j = i++;
-      storage[i] = value;
-      storage[j] = temp;
+      // let i = keys[keys.length - 1];
+      // let temp = storage[i];
+      // let j = i++;
+      // storage[i] = value;
+      // storage[j] = temp;
+
+      // realized based on new code, we don't have to make it LOOK like a stack with each new value
+      // being at the start of the array?
+      let newKey = keys[keys.length - 1] + 1;
+      storage[newKey] = value;
     }
   };
 

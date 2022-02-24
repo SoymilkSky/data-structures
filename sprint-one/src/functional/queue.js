@@ -11,8 +11,7 @@ var Queue = function() {
       storage['0'] = value;
     } else {
       let keys = Object.keys(storage);
-      let i = keys[0];
-      i++;
+      let i = keys[0] + 1;
       storage[i] = value;
     }
   };
