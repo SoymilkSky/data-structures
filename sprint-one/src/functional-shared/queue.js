@@ -14,7 +14,9 @@ queueMethods.enqueue = function(value) {
   if (keys.length === 0) {
     this.storage[0] = value;
   } else {
-    let newKey = keys[0] + 1;
+    // let newKey = keys[0] + 1;
+    // this.storage[newKey] = value;
+    let newKey = keys[keys.length - 1] + 1;
     this.storage[newKey] = value;
   }
 };
@@ -29,7 +31,3 @@ queueMethods.dequeue = function() {
 queueMethods.size = function() {
   return Object.keys(this.storage).length;
 };
-
-
-
-

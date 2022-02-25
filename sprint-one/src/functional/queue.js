@@ -8,11 +8,11 @@ var Queue = function() {
 
   someInstance.enqueue = function(value) {
     if (Object.keys(storage).length === 0) {
-      storage['0'] = value;
+      storage[0] = value;
     } else {
       let keys = Object.keys(storage);
-      let i = keys[0] + 1;
-      storage[i] = value;
+      let newKey = keys[keys.length - 1] + 1;
+      storage[newKey] = value;
     }
   };
 

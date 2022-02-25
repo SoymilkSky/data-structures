@@ -16,8 +16,11 @@ stackMethods.push = function(value) {
     this.storage[0] = value;
   } else {
     // else add value to a new key that is atop the old key
-    let newKey = keys[keys.length - 1] + 1;
-    this.storage[newKey] = value;
+    let i = keys[keys.length - 1];
+    let temp = this.storage[i];
+    let j = i++;
+    this.storage[i] = value;
+    this.storage[j] = temp;
   }
 };
 
@@ -31,13 +34,3 @@ stackMethods.pop = function() {
 stackMethods.size = function() {
   return Object.keys(this.storage).length;
 };
-
-
-
-
-
-
-
-
-
-
