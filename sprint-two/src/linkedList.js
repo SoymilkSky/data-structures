@@ -17,6 +17,19 @@ var LinkedList = function() {
     if (list.head === null) {
       list.head = newNode;
       list.tail = list.head;
+    } else {
+      var currNode = list.head;
+      // traverse the list to get to the tail
+      // check if current node.next === null
+      // if yes -> current node.next = newNode
+      while (currNode.next !== null) {
+        currNode = currNode.next;
+      }
+      currNode.next = newNode;
+      list.tail = newNode;
+
+      // for (var key in list)
+      // if list[key].next === null
     }
   };
 
