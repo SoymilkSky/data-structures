@@ -47,7 +47,6 @@ var LinkedList = function() {
   list.contains = function(target) {
     // same traversal as addToTail but check target vs currNode value
     var currNode = list.head;
-    console.log(currNode.value);
     while (currNode.next !== null) {
       if (currNode.value === target) {
         return true;
