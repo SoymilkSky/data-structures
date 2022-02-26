@@ -12,31 +12,11 @@ var LinkedList = function() {
   list.addToTail = function(value) {
     // delcare a new Node with passed in value
     var newNode = new Node(value);
-<<<<<<< HEAD
-=======
-
->>>>>>> pair
     // check if head is null
     // if it is, head = newNode
     if (list.head === null) {
       list.head = newNode;
       list.tail = list.head;
-<<<<<<< HEAD
-=======
-    } else {
-      var currNode = list.head;
-      // traverse the list to get to the tail
-      // check if current node.next === null
-      // if yes -> current node.next = newNode
-      while (currNode.next !== null) {
-        currNode = currNode.next;
-      }
-      currNode.next = newNode;
-      list.tail = newNode;
-
-      // for (var key in list)
-      // if list[key].next === null
->>>>>>> pair
     }
   };
 
